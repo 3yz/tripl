@@ -1,15 +1,14 @@
-Kohana Bootstrap v1.1
+Tripl v0.1
 ================
 
-<<<<<<< HEAD
-Kohana 3.3 + HTML5Boilerplate starter.
-=======
+Kohana + HTML5Boilerplate + SASS + lot of "living on the edge" web technologies stuffs
+
 Instalação 
 ----------
 
 Primeiro, clone o bootstrap:
 
-    git clone https://github.com/3yz/kohana_bootstrap.git nome_do_projeto
+    git clone https://github.com/3yz/tripl.git nome_do_projeto
 
 Depois de clonar, você deve iniciar os módulos:
 
@@ -41,5 +40,3 @@ Alterar o arquivo application/bootstrap.php, linha 92, colocar na variável $bas
 **4º passo**
 
 Configurar o banco de dados, colocar os dados para acessar a base no arquivo application/config/activerecord.php
-
->>>>>>> 9c2a98e75c2e560867e16e996b5b8b089deb9d27
