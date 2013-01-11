@@ -85,7 +85,7 @@ switch (Kohana::$environment) {
 		break;
 	
 	default:
-		$base_url = '/3yz/kohana_bootstrap/';
+		$base_url = '/3yz/tripl/';
 		break;
 }
 
