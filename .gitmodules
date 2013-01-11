@@ -1,0 +1,27 @@
+[submodule "system"]
+	path = system
+	url = https://github.com/kohana/core.git
+[submodule "modules/auth"]
+	path = modules/auth
+	url = https://github.com/kohana/auth
+[submodule "modules/cache"]
+	path = modules/cache
+	url = https://github.com/kohana/cache
+[submodule "modules/codebench"]
+	path = modules/codebench
+	url = https://github.com/kohana/codebench
+[submodule "modules/database"]
+	path = modules/database
+	url = https://github.com/kohana/database
+[submodule "modules/image"]
+	path = modules/image
+	url = https://github.com/kohana/image
+[submodule "modules/minion"]
+	path = modules/minion
+	url = https://github.com/kohana/minion.git
+[submodule "modules/orm"]
+	path = modules/orm
+	url = https://github.com/kohana/orm.git
+[submodule "modules/unittest"]
+	path = modules/unittest
+	url = https://github.com/kohana/unittest.git
