@@ -4,6 +4,7 @@
 ############
 application/cache/*
 application/logs/*
+.htaccess
 .sass-cache
 
 # Packages #

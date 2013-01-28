@@ -279,7 +279,7 @@ AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
 RewriteEngine On
 
 # Installation directory
-RewriteBase /3yz/kohana_bootstrap/
+RewriteBase /3yz/tripl/
 
 # Protect hidden files from being viewed
 <Files .*>
