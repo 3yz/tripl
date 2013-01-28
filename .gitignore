@@ -4,6 +4,7 @@
 ############
 application/cache/*
 application/logs/*
+application/bootstrap.php
 .htaccess
 .sass-cache
 

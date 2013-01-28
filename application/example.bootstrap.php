@@ -85,7 +85,7 @@ switch (Kohana::$environment) {
 		break;
 	
 	default:
-		$base_url = '/3yz/tripl/';
+		$base_url = '/projetos/3yz/tripl/';
 		break;
 }
 
