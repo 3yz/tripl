@@ -105,6 +105,7 @@ switch (Kohana::$environment) {
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
+	'index_file' => false,
 	'base_url'   => $base_url,
 ));
 
@@ -122,26 +123,23 @@ Kohana::$config->attach(new Config_File);
  * Enable modules. Modules are referenced by a relative or absolute path.
  */
 Kohana::modules(array(
-	// 'auth'       => MODPATH.'auth',       // Basic authentication
-	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
-	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
-	// 'database'   => MODPATH.'database',   // Database access
-	// 'image'      => MODPATH.'image',      // Image manipulation
-	'minion'     => MODPATH.'minion',     // CLI Tasks
-	// 'orm'        => MODPATH.'orm',        // Object Relationship Mapping
-	// 'unittest'   => MODPATH.'unittest',   // Unit testing
-	// 'userguide'  => MODPATH.'userguide',  // User guide and API documentation
-	'minion'  => MODPATH.'minion',
+	'tripl-manager'  => MODPATH.'tripl-manager',  // User guide and API documentation
+	'auth'           => MODPATH.'auth',       // Basic authentication
+	'assets'         => MODPATH.'assets',       // Basic authentication
+	// 'cache'         => MODPATH.'cache',      // Caching with multiple backends
+	// 'codebench'     => MODPATH.'codebench',  // Benchmarking tool
+	'database'       => MODPATH.'database',   // Database access
+	// 'image'         => MODPATH.'image',      // Image manipulation
+	'minion'         => MODPATH.'minion',     // CLI Tasks
+	'orm'            => MODPATH.'orm',        // Object Relationship Mapping
+	'kohana-notices' => MODPATH.'kohana-notices',        // Object Relationship Mapping
+	// 'unittest'      => MODPATH.'unittest',   // Unit testing
+	// 'userguide'     => MODPATH.'userguide',  // User guide and API documentation
+	
 	));
+
 
 Cookie::$salt = md5($base_url);
 
-/**
- * Set the routes. Each route must have a minimum of a name, a URI and a set of
- * defaults for the URI.
- */
-Route::set('default', '(<controller>(/<action>(/<id>)))')
-	->defaults(array(
-		'controller' => 'pages',
-		'action'     => 'index',
-	));
+// Load Routes
+require APPPATH.'routes'.EXT;
