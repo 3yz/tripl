@@ -13,7 +13,7 @@
         <?php echo HTML::style('public/css/main.css') ?>
         <?php echo HTML::script('public/js/vendor/modernizr-2.6.2.min.js') ?>
     </head>
-    <body>
+    <body id="<?php echo Request::current()->controller() ?>" class="<?php echo Request::current()->action(); ?>" data-root-url="<?php echo Url::base(TRUE) ?>">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
