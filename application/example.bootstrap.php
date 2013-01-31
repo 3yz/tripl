@@ -142,6 +142,9 @@ Kohana::modules(array(
 	
 	));
 
+// Define global paths
+define('PUBLIC_PATH', DOCROOT.'public/');
+define('UPLOAD_PATH', PUBLIC_PATH.'upload/');
 
 Cookie::$salt = md5($base_url);
 
