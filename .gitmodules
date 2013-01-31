@@ -31,3 +31,6 @@
 [submodule "modules/tripl-manager"]
 	path = modules/tripl-manager
 	url = https://github.com/3yz/tripl-manager.git
+[submodule "modules/pagination"]
+	path = modules/pagination
+	url = https://github.com/shadowhand/pagination.git

@@ -99,6 +99,12 @@ AddType text/x-vcard                        vcf
   SetOutputFilter INCLUDES
 </FilesMatch>
 
+#<FilesMatch "\.combined\.css$">
+#  Options +Includes
+#  AddOutputFilterByType INCLUDES text/css
+#  SetOutputFilter INCLUDES
+#</FilesMatch>
+
 # ----------------------------------------------------------------------
 # Gzip compression
 # ----------------------------------------------------------------------

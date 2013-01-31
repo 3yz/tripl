@@ -105,14 +105,17 @@ switch (Kohana::$environment) {
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'index_file' => false,
+	'index_file' => FALSE,
 	'base_url'   => $base_url,
+	'errors' 		 => (Kohana::$environment != Kohana::PRODUCTION),
+	'caching'    => Kohana::$environment == Kohana::PRODUCTION
 ));
 
 /**
  * Attach the file write to logging. Multiple writers are supported.
  */
 Kohana::$log->attach(new Log_File(APPPATH.'logs'));
+Log::$write_on_add = TRUE;
 
 /**
  * Attach a file reader to config. Multiple readers are supported.
@@ -125,14 +128,15 @@ Kohana::$config->attach(new Config_File);
 Kohana::modules(array(
 	'tripl-manager'  => MODPATH.'tripl-manager',  // User guide and API documentation
 	'auth'           => MODPATH.'auth',       // Basic authentication
-	'assets'         => MODPATH.'assets',       // Basic authentication
+	'assets'         => MODPATH.'assets',       
 	// 'cache'         => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'     => MODPATH.'codebench',  // Benchmarking tool
 	'database'       => MODPATH.'database',   // Database access
 	// 'image'         => MODPATH.'image',      // Image manipulation
 	'minion'         => MODPATH.'minion',     // CLI Tasks
 	'orm'            => MODPATH.'orm',        // Object Relationship Mapping
-	'kohana-notices' => MODPATH.'kohana-notices',        // Object Relationship Mapping
+	'kohana-notices' => MODPATH.'kohana-notices',  
+	'pagination'     => MODPATH.'pagination',   
 	// 'unittest'      => MODPATH.'unittest',   // Unit testing
 	// 'userguide'     => MODPATH.'userguide',  // User guide and API documentation
 	
