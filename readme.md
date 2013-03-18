@@ -1,4 +1,4 @@
-Tripl v0.1
+Tripl v0.2
 ================
 
 Kohana + HTML5Boilerplate + SASS + lot of "living on the edge" web technologies stuffs
@@ -6,7 +6,7 @@ Kohana + HTML5Boilerplate + SASS + lot of "living on the edge" web technologies 
 Instalação 
 ----------
 
-Primeiro, clone o bootstrap:
+Primeiro, clone o tripl:
 
     git clone https://github.com/3yz/tripl.git nome_do_projeto
 
@@ -21,9 +21,16 @@ Deployment
 
 **1º passo**
 
-Colocar o arquivo install.php dentro do servidor e acessá-lo para ver se o mesmo tem todos os requisitos necessários para rodar o sistema.
+Acessar a URL do projeto e verificar se o servidor tem todos os requisitos necessários para rodar o sistema. Se tudo estiver ok, remova o arquivo install.php da raiz.
 
-**2º passo**
+**2º passo** 
+
+Renomeie os arquivos:
+
+- example.htaccess -> .htaccess
+- application/example.bootstrap.php -> application/bootstrap.php
+
+**3º passo**
 
 No fim do arquivo .htaccess (que se encontra na raiz do pacote), deve ser alterado as seguintes variáveis:
 
@@ -31,12 +38,12 @@ No fim do arquivo .htaccess (que se encontra na raiz do pacote), deve ser altera
 - RewriteBase / 
 
 o KOHANA_ENV deve estar em configurado para PRODUCTION e o RewriteBase deve ser configurado com o caminho do site no server. Se por exemplo o site for www.sitedeexemplo.com.br, o Rewrit
-eBase deve ser /. Caso for www.sitedeexemplo.com.br/homologacao o RewriteBase deve ser /homologacao/.
-
-**3º passo**
-
-Alterar o arquivo application/bootstrap.php, linha 92, colocar na variável $base_url o mesmo caminho colocado no RewriteBase
+eBase deve ser /. Caso for www.sitedeexemplo.com.br/homologacao o RewriteBase deve ser /homologacao/;
 
 **4º passo**
 
-Configurar o banco de dados, colocar os dados para acessar a base no arquivo application/config/activerecord.php
+Alterar o arquivo application/bootstrap.php, colocar na variável $base_url o mesmo caminho colocado no RewriteBase;
+
+**5º passo**
+
+Configurar o banco de dados, colocar os dados para acessar a base no arquivo application/config/database.php de acordo com o ambiente que vocês estiver. 
