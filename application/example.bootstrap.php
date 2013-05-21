@@ -22,7 +22,7 @@ else
  * @link http://kohanaframework.org/guide/using.configuration
  * @link http://www.php.net/manual/timezones
  */
-date_default_timezone_set('America/Chicago');
+date_default_timezone_set('America/Sao_Paulo');
 
 /**
  * Set the default locale.
@@ -137,6 +137,7 @@ Kohana::modules(array(
 	'orm'            => MODPATH.'orm',        // Object Relationship Mapping
 	'kohana-notices' => MODPATH.'kohana-notices',  
 	'pagination'     => MODPATH.'pagination',   
+	// 'mailer'        => MODPATH.'mailer',   // Unit testing
 	// 'unittest'      => MODPATH.'unittest',   // Unit testing
 	// 'userguide'     => MODPATH.'userguide',  // User guide and API documentation
 	
