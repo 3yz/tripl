@@ -1,5 +1,8 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
+//ie session bug-fix
+header('P3P: CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"');
+
 // -- Environment setup --------------------------------------------------------
 
 // Load the core Kohana class
